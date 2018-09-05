@@ -1,0 +1,17 @@
+a.
+learning_rate = 0.5
+training_epochs =100
+display_step = 100
+
+		Training Cost		Testing Cost				Difference
+1st Order	0.189				0.469				0.279
+2nd Order	0.128				0.298				0.171
+3rd Order	0.10				0.23				0.13
+4th Order	0.088				0.184				0.096
+5th Order	0.11				0.23				0.12
+
+b.
+As table shown, 4th Order polynomial regression has the smallest testing cost and absolute mean difference, which means it is the most accurate regression model in this set of data.
+
+c.
+As table shown, overfitting problem occurs when appling 5th order regression. The training costs are small, which means all the models are completely trained. The testing cost represents the accuracy of our trained model. In our result, the testing cost reaches its minimum in 4th order. Therefore, 5th order regression is overfitting.

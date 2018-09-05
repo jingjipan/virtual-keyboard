@@ -1,0 +1,50 @@
+Special features are written in readme.txt.
+
+Single:
+Table 1. Accuracy of 10 trials (learning rate 0.15, 3 hidden layers, 32 neurons, 500 epochs)
+Trial			Accuracy
+1				0.6
+2				0.6
+3				0.8
+4				0.8
+6				0.6
+7				0.8
+8				0.6
+9				1
+10				0.8
+mean			0.72
+
+Multi:
+TABLE 2. #Neurons vs Accuracy (four hidden layers, learning rate 0.15, 500 epochs)
+			4		8		16		32		64		128		256
+1			0.8		0.6		0.8		0.4		0.8		0.8		0.8
+2			0.8		0.6		0.6		0.8		0.8		1		1
+3			0.8		0.6		0.6		0.8		0.8		0.8		0.8
+4			0.8		0.6		0.6		0.8		0.8		0.8		0.8
+5			0.8		0.6		0.8		0.8		1		0.8		0.8
+6			0.8		0.6		0.8		0.8		0.6		0.8		1	
+7			0.8		0.4		0.8		0.8		0.8		0.8		0.8	
+8			0.6		1		0.6		0.6		0.8		0.8		0.8
+9			0.8		0.8		0.8		0.8		0.8		0.8		0.8
+10			0.6		0.6		0.8		0.8		0.8		1		0.8
+avg			0.76	0.64	0.72	0.74	0.8		0.84	0.84
+
+TABLE 3. #Layers vs Accuracy (64 neurons, learning rate 0.15, 500 epochs)
+			1		2 		3 		4 
+1			0.8		0.8		0.8		0.8
+2			0.6		0.8		0.8		0.8
+3			0.8		0.8		0.8		0.8
+4			0.6		0.8		0.8		0.8
+5			0.8		0.8		0.8		1
+6			0.8		0.6		0.8		0.6
+7			0.8		0.6		0.8		0.8
+8			0.6		0.8		0.8		0.8
+9			0.6		0.8		0.6		0.8
+10			0.8		0.8		1		0.8
+AVG			0.72	0.76	0.8		0.8
+
+Investigation:
+We used three vectors combined as data input instead of a single vector input in mult-axis program. It is observed that multi-axis has a better performance in accuracy. Because multiple vector contains more information of pressing a key. Lower loss of information leads to better performance, since the neural network could learn more features.
+
+In multi-axis inverstigation, we can observe that, more layers and more neurons in hidden layer leads to better performance, when # of layer and # of neurons are small. When we increase the # layer and neuron to some number, the accuracy would remain the same. Because each neuron represents a hyper-feature in higher dimension and each layer represents a higher dimension. However, # of layers and hyper-features are limited, when all hyper-features are represented, then increase of neuron and layer would no longer affect the model's performance.
+As a result, multi-axis model with 4 hidden layers and 128 neurons performs the best, it has an accuracy of 0.84.
